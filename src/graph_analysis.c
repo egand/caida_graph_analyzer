@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
     igraph_vector_int_t res;
     igraph_vector_int_init(&res, 0);
 
-    cga_graph_analysis(&igraph, 1, "./output/test/test3");
+    cga_graph_analysis(&igraph, 1, "./output/test/test");
     printf("Finish!\n");
     igraph_vector_int_destroy(&res);
     igraph_destroy(&igraph);

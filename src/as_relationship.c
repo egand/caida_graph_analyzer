@@ -340,7 +340,7 @@ float cga_degree_freedom_path(igraph_t *graph, igraph_integer_t vertex1_id, igra
     unsigned int vfree = 0, nvfree = 0;
     igraph_vector_int_init(&res, 0);
     igraph_vector_int_init(&v, 0);
-    igraph_get_all_simple_paths(graph, &res, vertex1_id, igraph_vss_1(vertex2_id), IGRAPH_ALL);
+    igraph_get_all_simple_paths(graph, &res, vertex1_id, igraph_vss_1(vertex2_id), -1, IGRAPH_ALL);
 
     for (long i = 0; i < igraph_vector_int_size(&res); i++) {
         if (VECTOR(res)[i] != -1) {
